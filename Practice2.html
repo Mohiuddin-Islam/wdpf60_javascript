@@ -6,38 +6,99 @@
     <title>Document</title>
 </head>
 <body>
-<!-- <script>
-    function primeCheck(){
-        let num = prompt("Enter any number", "");
-        if(num == 1){
-            return num + " is not a prime number";
-        }else if(num == 2){
-            return num + " is a prime number";
-        }else if(num == 0){
-            return num + " Is not allowed"
-        }else {
-            for(var i = 2; i <num; i++){
-                if(num % i == 0){
-                    return num + " is not a prime number";
-                }
-            }
-            return num + " is a prime number";
-        }
-    }
-    document.write(primeCheck());
-</script> -->
-
-
-
-    <script>
+    <!-- <script>
         function factCalc(){
-            let num = prompt("Enter a number", "");
+            let num = prompt("Enter any number", "");
             let fact = 1;
-            for (let i = num; i>=1; i--){
+
+            for(let i = num; i>=1; i--){
                 fact = fact * i;
             }alert(fact);
         }
     </script>
-    <button onclick="factCalc()">Click Here</button>
+    <button onclick="factCalc()">Click Here</button> -->
+
+<!-- 
+    <script>
+        const students = ["Rakib", "Saif", "Masud", "Abir", "Nazrul"];
+        students.sort();
+
+        for (let i = 0; i<students.length; i++){
+            document.write(students[i] + "<br>");
+        }
+    </script> -->
+
+    <!-- <script>
+        let number = [10, 25, 45, 60, 80];
+        let max = number[0];
+
+        for (let i = 1; i<number.length; i++){
+            if(number[i] > max){
+                max = number[i];
+            }
+        }
+        document.write(max);
+    </script> -->
+
+    <!-- <script>
+        function primeCheck(){
+            let num = prompt("Enter a number", "");
+            if(num == 1){
+                return num + " Is not a prime number";
+            }else if (num == 2){
+                return num + " Is a prime number";
+            }else{
+                for(let i = 2; i<num; i++){
+                    if(num % i == 0){
+                        return num + " Is not a prime number";
+                    }
+                }
+                return num + " Is a prime number";
+            }
+        }
+        document.write(primeCheck());
+    </script> -->
+
+    <!-- <div id="factorial"></div>
+    <script>
+        function factCalc(){
+            let num = prompt("Enter a number", "");
+            let fact = 1;
+
+            for (let i = num; i>=1; i--){
+                fact = fact * i;
+            }//alert(fact);
+            document.getElementById("factorial").innerHTML = fact
+        }
+        
+    </script>
+    <button onclick="factCalc()">Click Here</button>  -->
+
+
+    <!-- <script>
+        let number = [14, 20, 30, 7, 50];
+        let max = number[0];
+
+        for(let i = 1; i<number.length; i++){
+            if(number[i] > max){
+                max = number[i];
+            }
+        }
+        document.write(max);
+    </script> -->
+
+
+    <div id="result"></div>
+    <script>
+        function odd_even(){
+            let num = prompt("Enter a number", "");
+            if(num % 2 == 0){
+                document.getElementById("result").innerHTML = "Odd"
+            }else{
+                document.getElementById("result").innerHTML = "Even"
+            }
+        }
+    </script>
+    <button onclick="odd_even()">Click Here</button>
 </body>
 </html>
