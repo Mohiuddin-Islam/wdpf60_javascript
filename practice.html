@@ -3,28 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Factorial</title>
+    <!-- <style>
+        #result{
+            width: 150px;
+            height: 70px;
+            padding: 20px;
+            font-size: 25px;
+            background-color: aqua;
+        }
+    </style> -->
 </head>
 <body>
-    <!-- <div id="result"></div> -->
+    <!-- <h3>Factorial</h3>
     <script>
-        
-        // // function sum(){
-        // // let x, y, z, res1;
-        // // x = 2;
-        // // y = 4;
-        // // z = 6;
-
-        // // res1 = x + y;
-        // // document.getElementById("result").innerHTML = "res1";
-        // // document.write("<br>")
-
-        // }
-    
-    
+        function factCalc(){
+            let num = prompt("Enter any number", "");
+            let fact = 1;
+            for(let i = num; i>=1; i--){
+                fact = fact * i;
+            }
+            alert(fact);
+        }
     </script>
-    <!-- <button onclick="sum()">Click Here</button> -->
+    <button onclick="factCalc()">Click Here</button> -->
 
-    
+
+    <!-- <h3>Students Array</h3>
+    <script>
+        const students = ["Saif", "Hasif", "Masud", "Abid", "Fahim"];
+        students.sort();
+        for (let i = 0; i<students.length; i++) {
+            document.write(students[i] + "<br>");
+        }
+    </script> -->
+
+    <!-- <h3>Sorting</h3>
+    <script>
+        let fruits = ["Watermelon", "Orange", "Apple", "Mango", "Banana"];
+
+        fruits.sort();
+        document.write(fruits);
+        
+    </script> -->
+
+    <!-- <h3>Pass_Fail</h3>
+    <div id="result"></div>
+    <script>
+        function pass_fail(){
+
+            let mcq = prompt("Enter Marks", "");
+            let descr = prompt("Enter Descriptive Marks", "");
+            let evidence = prompt("Enter evidence Marks", "");
+
+            if (mcq >= 80 && descr >= 60 && evidence >= 60) {
+            document.getElementById("result").innerHTML = "Pass";
+            } else {
+            document.getElementById("result").innerHTML = "Fail";
+            }
+        }
+    </script>
+        <button onclick="pass_fail()">Click Here</button> -->
+
+
+        <!-- <h3>Max Number</h3>
+        <script>
+        let number = [7, 16, 35, 70, 92];
+        let max = number[0];
+        for (let i = 1; i<number.length; i++) {
+            if (number[i] > max) {
+                max = number[i];
+            }
+        }
+        document.write(max);
+        </script> -->
+
+
+        <!-- <h3>Prime Number</h3>
+        <script>
+            function primeCheck(){
+            let num = prompt("Enter a number", "");
+            if(num == 1) {
+                return num + "Is not a prime number";
+            }else if (num == 2) {
+                return num + "Is a Prime number";
+            }else {
+                for(var x = 2; x<num; x++){
+                    if(num % x == 0){
+                    return num + "Is not a prime number";
+                    }
+                }
+                return num + "Is a Prime number";
+            }
+            }
+            document.write(primeCheck());
+        </script> -->
 </body>
 </html>
