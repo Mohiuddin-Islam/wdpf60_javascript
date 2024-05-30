@@ -3,38 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Document</title>
 </head>
 <body>
-
-<center>
-    <form action="" name="myform">
-        <strong>Email:</strong>
-        <input type="text" name="email" placeholder="Enter Email"><br><br>
-        <strong>Password:</strong>
-        <input type="password" name="password" placeholder="Enter Password"><br><br>
-        <button onclick="validate()">Validate</button>
-
-    </form>
-</center>
-
-    <script>
-        function validate(){
-        let email = document.myform.email.value;
-        let password = document.myform.password.value;
-
-        let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
-        let result = email.search(pattern);
-
-        if(result ==-1){
-            alert("Not Valid");
-        }else if(password.length<7){
-            alert("Not Valid");
-        }else{
-            alert("Valid")
+   <script>
+    let students = ["Masud", "Saif", "Rakib", "Abir", "Nazrul"];
+    
+    
+    document.write("<ol>");
+        for (let i = 0; i < students.length; i++){
+            document.write("<li>" + students[i].toUpperCase() + "</li>");
         }
-    }
-
-    </script>
+        document.write("</ol>");
+   </script>
 </body>
 </html>
