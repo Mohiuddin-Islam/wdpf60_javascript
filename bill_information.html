@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill-Information</title>
+</head>
+<body>
+    <center>
+        <form action="" name="myform">
+            <h1>Billing Information</h1>
+            <fieldset style="width: fit-content;">
+                <strong>First Name:</strong>
+                <input type="text" name="fname" placeholder="Enter First Name"><br><br>
+                <strong>Last Name:</strong>
+                <input type="text" name="lname" placeholder="Enter Last Name"><br><br>
+                <strong>Gender:</strong>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female <br><br>
+                <strong>Language:</strong>
+                <input type="radio" name="lang" value="arabic">Arabic
+                <input type="radio" name="lang" value="english">English
+                <input type="radio" name="lang" value="bangla">Bangla <br><br>
+                <strong>Email:</strong>
+                <input type="text" name="email" placeholder="Enter Email"><br><br>
+                <strong>Address:</strong>
+                <textarea name="address" placeholder="Enter Address Here"></textarea><br><br>
+                <strong>State:</strong>
+                <select name="state">
+                    <option value="hidden">Choose State</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Barisal">Barisal</option>
+                    <option value="Cumilla">Cumilla</option>
+
+                </select><br><br>
+                <strong>Zip Code:</strong>
+                <input type="text" name="zip" placeholder="Enter Zip Code"><br><br>
+                <strong>Credit Card Type:</strong>
+                <select name="card">
+                    <option value="hidden">Choose Credit Card</option>
+                    <option value="VisaCard">VisaCard</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="DebitCard">DebitCard</option>
+                </select><br><br>
+                <button onclick="bill()" type="button">Submit</button>
+            </fieldset>
+        </form>
+    </center>
+
+    <script>
+function bill(){
+    let name1 = document.myform.fname.value;
+    let name2 = document.myform.lname.value;
+    let gender = document.myform.gender.value;
+    let lang = document.myform.lang.value;
+    let email = document.myform.email.value;
+    let address = document.myform.address.value;
+    let state = document.myform.state.value;
+    let zip = document.myform.zip.value;
+    let card = document.myform.card.value;
+
+    // let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+    // let result = email.search(pattern);
+
+    // if(name1==""){
+    //     alert("First name must be entered");
+    // }else if(name2==""){
+    //     alert("Last name must be entered");
+    // }else if(gender==""){
+    //     alert("Gender must be select");
+    // }else if(lang==""){
+    //     alert("Language must be select");
+    // }else if(result==-1){
+    //     alert("Email not valid");
+    // }else if(address==""){
+    //     alert("Address must be entered");
+    // }else if(state==""){
+    //     alert("State must be select");
+    // }else if(zip==""){
+    //     alert("Zip must be entered");
+    // }else if(card==""){
+    //     alert("Credit card type must be select");
+    // }else{
+        let mywindow = window.open("","abc","width=500, height=600");
+
+                let output;
+                output = "<h1>Billing Information</h1>";
+                output += "First Name: " + name1 + "<br>"
+                output += "Last Name: " + name2 + "<br>"
+                output += "Gender: " + gender + "<br>"
+                output += "Language: " + lang + "<br>"
+                output += "Email: " + email + "<br>"
+                output += "Address: " + address + "<br>"
+                output += "State: " + state + "<br>"
+                output += "Zip: " + zip + "<br>"
+                output += "Credit Card Type: " + card + "<br>"
+
+                mywindow.document.write(output);
+    }
+// }
+    </script>
+</body>
+</html>

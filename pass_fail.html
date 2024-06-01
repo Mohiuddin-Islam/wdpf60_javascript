@@ -17,7 +17,7 @@
 <body>
     <h3>Find Pass or Fail</h3>
 
-    <div id="result"></div>
+    <!-- <div id="result"></div>
     <script>
         function pass_fail(){
             let mcq = prompt("Enter marks", "");
@@ -25,16 +25,38 @@
             let evidence = prompt("Enter Evidence marks", "");
 
             if(mcq >= 80 && descr >= 60 && evidence >= 60){
-                //alert("pass")
+                
                 document.getElementById("result").innerHTML = "Pass";
             } else{
-                //alert("fail")
+                
                 document.getElementById("result").innerHTML = "Fail";
             }
         }
     </script>
     
 
-    <button onclick="pass_fail(result)">Click Here</button>
+    <button onclick="pass_fail(result)">Click Here</button> -->
+
+
+        <h3>Grade</h3>
+
+    <!-- <div id="result"></div>
+    <script>
+
+        function pass(){
+            let num = prompt("Enter a Marks", "");
+
+            if(num >= 80){
+                document.getElementById("result").innerHTML = "A+"
+            }else if (num >= 70){
+                document.getElementById("result").innerHTML = "A"
+            }else if (num >= 60){
+                document.getElementById("result").innerHTML = "B"
+            }else  {
+                document.getElementById("result").innerHTML = "Fail"
+            }
+        }
+    </script>
+    <button onclick="pass()">Check</button> -->
 </body>
 </html>
