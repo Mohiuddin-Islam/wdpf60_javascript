@@ -3,18 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Validation</title>
 </head>
 <body>
-   <script>
-    let students = ["Masud", "Saif", "Rakib", "Abir", "Nazrul"];
-    
-    
-    document.write("<ol>");
-        for (let i = 0; i < students.length; i++){
-            document.write("<li>" + students[i].toUpperCase() + "</li>");
+    <!-- <form action="" name="myform">
+        <h1>Student Entry Form</h1>
+        <fieldset style="width: fit-content;">
+            <strong>Student ID:</strong>
+            <input type="text" name="id" placeholder="Enter ID"><br><br>
+            <strong>Name:</strong>
+            <input type="text" name="name" placeholder="Enter Name"><br><br>
+            <strong>Course:</strong>
+            <input type="text" name="course" placeholder="Enter Course"><br><br>
+            <strong>Year/Section:</strong>
+            <input type="text" name="year" placeholder="Enter Year"><br><br>
+
+            <button onclick="data()" type="button">SUBMIT</button>
+        </fieldset>
+    </form>
+
+    <script>
+        function data(){
+            let id = document.myform.id.value;
+            let name = document.myform.name.value;
+            let course = document.myform.course.value;
+            let year = document.myform.year.value;
+
+        
+            if(id ==""){
+                alert("ID must be entered");
+            }else if (name==""){
+                alert("Name must be entered");
+            }else if(course==""){
+                alert("Course must be entered");
+            }else if(year==""){
+                alert("Year must be entered");
+            }else{
+                let mywindow = window.open("","","width=500, height=500");
+            let output;
+            output = "<h1>Data Entry Form</h1>";
+            output += "Student ID: " + id + "<br><br>";
+            output += "Name: " + name + "<br><br>";
+            output += "Course: " + course + "<br><br>";
+            output += "Year: " + year + "<br><br>";
+
+            mywindow.document.write(output);
+            }
         }
-        document.write("</ol>");
-   </script>
+    </script> -->
+
+
+    <!-- <form action="" name="myform">
+        <input type="date" name="date" id="">
+        <button onclick="myDay()" type="button">Show</button>
+    </form>
+
+    <script>
+        function myDay(){
+            let x = document.myform.date.value;
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const d = new Date(x);
+            alert(days[d.getDay()]);
+        }
+    </script> -->
+
+    <!-- <script>
+        let students = ["Saif", "Rakib", "Abir", "Joy", "Nazrul"];
+        students.sort();
+        document.write("<ol>");
+            for(let i = 0; i<students.length; i++){
+                document.write("<li>" + students[i].toUpperCase() + "</li>");
+            }
+            document.write("<ol>");
+    </script> -->
+
+    <form action="" name="myform">
+        <h1>User Login Form</h1>
+        <fieldset style="width: fit-content;">
+            <strong>User Name:</strong>
+            <input type="text" name="name" placeholder="Enter User Name"><br><br>
+            <strong>Email:</strong>
+            <input type="text" name="email" placeholder="Enter Email"><br><br>
+            <strong>Confirm Email:</strong>
+            <input type="text" name="con_email" placeholder="Enter Confirm Email"><br><br>
+            <strong>Password:</strong>
+            <input type="text" name="password" placeholder="Enter Password"><br><br>
+            <button onclick="data()">Login</button>
+
+        </fieldset>
+    </form>
+    <script>
+        function data(){
+            let name = document.myform.name.value;
+            let email1 = document.myform.email.value;
+            let email2 = document.myform.con_email.value;
+            let password = document.myform.password.value;
+
+            let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+            let result = email1.search(pattern);
+
+
+            if(name ==""){
+                alert("Name must be entered");
+            }else if(email1!=email2){
+                alert("Not Matched");
+            }else if (password.length<6){
+                alert("Password must be entered");
+            }else{
+                alert("Valid");
+            }
+        }
+    </script>
 </body>
 </html>

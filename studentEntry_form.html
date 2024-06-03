@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Entry Form</title>
+</head>
+<body>
+    <form action="" name="myform">
+        <h1>Student Entry Form</h1>
+        <fieldset style="width: fit-content;">
+            <strong>Name:</strong>
+            <input type="text" name="name" placeholder="Enter Name"><br><br>
+            <strong>Contact:</strong>
+            <input type="text" name="contact" placeholder="Enter Contact"><br><br>
+            <strong>Remarks:</strong>
+            <textarea name="remarks" placeholder="Enter Remarks Here"></textarea><br><br>
+            <strong>Sex:</strong>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female <br><br>
+            <strong>Course:</strong>
+            <input type="checkbox" name="nt" value="NT" class="course">NT
+            <input type="checkbox" name="iad" value="IAD" class="course">IAD
+            <input type="checkbox" name="ddd" value="DDD" class="course">DDD              
+            <input type="checkbox" name="esad" value="ESAD" class="course">ESAD <br><br>
+            <strong>Location:</strong>
+            <select name="location">
+                <option value="">Choose One</option>
+                <option value="banani">Banani</option>
+                <option value="dhanmondi">Dhanmondi</option>
+                <option value="mirpur">Mirpur</option>
+            </select><br><br>
+            <button onclick="myData()" type="button">SUBMIT</button>
+
+
+        </fieldset>
+
+    </form>
+    <script>
+        function myData(){
+            let name = document.myform.name.value;
+            let contact = document.myform.contact.value;
+            let remarks = document.myform.remarks.value;
+            let sex = document.myform.gender.value;
+            let course = document.getElementsByClassName("course");
+            let cd = ""
+            for (let i = 0; i<course.length; i++){
+                if(course[i].checked){
+                    cd += course[i].value +" "
+                }
+            }
+            let location = document.myform.location.value;
+            
+            let output = "<h1>Data Entry Form</h1>";
+            output += "Name: " + name + "<br><br>";
+            output += "Contact: " + contact + "<br><br>";
+            output += "Remarks: " + remarks + "<br><br>";
+            output += "Sex: " + sex + "<br><br>";
+            output += "Course: " + cd + "<br><br>";
+            output += "Location: " + location + "<br><br>";
+
+            let mywindow = window.open("","","width=500, height=500");
+            mywindow.document.write(output);
+
+        }
+    </script>
+</body>
+</html>
