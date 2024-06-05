@@ -47,7 +47,7 @@
                 let cd = ""
                 for(let i = 0; i<course.length; i++){
                     if(course[i].checked){
-                        cd += course[i].value;
+                        cd += course[i].value +", "
                     }
                 }
         
@@ -62,7 +62,7 @@
         output += "Course: " + cd + "<br><br>";
         output += "Location: " + location + "<br><br>";
 
-        let mywindow = window.open("","abc","width=500,height=600");
+        let mywindow = window.open("","abc","width=700,height=500");
         mywindow.document.write(output);
 
 
