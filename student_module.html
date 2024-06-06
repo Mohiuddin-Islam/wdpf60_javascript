@@ -9,9 +9,11 @@
 <body>
     <div id="show"></div>
     <script type="module">
+
     import student_info, {district, country} from "./student.js";
     let output = student_info();
     output += `<br> ${district}, ${country}`;
+    
     document.getElementById("show").innerHTML = output;
     </script>
 
