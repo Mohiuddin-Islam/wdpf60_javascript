@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Email Validation</title>
+</head>
+<body>
+    <h3>Email Validation</h3>
+    
+    <script>
+        class EmailCheck{
+            constructor(xemail){
+                this.yemail = xemail;
+            }
+            validEmail(){
+                let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+                if(this.yemail.search(pattern)) {
+                    alert("Email Address is Wrong");
+                }else {
+                    alert("Email Address is Correct");
+                }
+            }
+        }
+        let email = prompt("Enter Email Address","");
+        let validate = new EmailCheck(email);
+        let result = validate.validEmail();
+    </script>
+</body>
+</html>
