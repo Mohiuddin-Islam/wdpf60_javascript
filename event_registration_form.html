@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+</head>
+<body>
+    <div id="show"></div>
+    <form action="thankyou.html" name="myform" onsubmit="return eventValid()">
+        <h3>Event Registration Form</h3>
+        <fieldset style="width: fit-content;">
+        Name: <input type="text" name="fname" placeholder="Enter First Name">
+            <input type="text" name="lname" placeholder="Enter Last Name"><br><br>
+            Company: <textarea name="company" id=""></textarea><br><br>
+            Email: <input type="text" name="email" placeholder="example@gmail.com"><br><br>
+            Phone: <input type="text" name="number" placeholder="Phone Number"> <input type="text" name="code" placeholder="Area Code"><br><br>
+            Subject: <select name="subject">
+                <option value="">Choose Option</option>
+                <option value="bangla">Bangla</option>
+                <option value="English">English</option>
+                <option value="arabic">Arabic</option>
+            </select><br><br>
+            Are you an existing customer? : <input type="radio" name="customer" value="Yes">Yes
+            <input type="radio" name="customer" value="No">No<br><br>
+            <button type="submit">REGISTER</button>
+        </fieldset>
+
+    </form>
+    <script>
+        function eventValid(){
+            let fname = document.myform.fname.value;
+            let lname = document.myform.lname.value;
+            let company = document.myform.company.value;
+            let email = document.myform.email.value;
+            let phone = document.myform.number.value;
+            let code = document.myform.code.value;
+            let subject = document.myform.subject.value;
+            let customer = document.myform.customer.value;
+            let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+            let result = email.search(pattern);
+
+            const errors = [];
+
+            if(fname==""){
+                errors[errors.length] = "First name can't be empty";
+            }
+
+            if(lname==""){
+                errors[errors.length] = "Last name can't be empty";
+            }
+
+            if(company ==""){
+                errors[errors.length] = "Company name can't be empty";
+            }
+
+            if(email==""){
+                errors[errors.length] = "Email can't be empty";
+            }
+
+            if(phone==""){
+                errors[errors.length] = "Phone number can't be empty";
+            }
+
+            if(code==""){
+                errors[errors.length] = "Code can't be empty";
+            }
+
+            if(subject==""){
+                errors[errors.length] = "Subject can't be empty";
+            }
+
+            if(customer==""){
+                errors[errors.length] = "Customer can't be empty";
+            }
+
+            if(result ==-1){
+            errors[errors.length] = "Enter valid Email";
+
+            }
+
+            if(errors.length>0){
+                let ErrorOutput ="<ul>";
+
+            for (let i = 0; i<errors.length; i++){
+            ErrorOutput += "<li>" + errors[i] + "</li>";
+            }
+
+            ErrorOutput += "</ul>"
+            document.getElementById("show").innerHTML = ErrorOutput;
+            return false;
+            }else{
+            // document.getElementById("show").innerHTML = "";
+            return true;
+            }
+            
+        }
+    </script>
+</body>
+</html>
