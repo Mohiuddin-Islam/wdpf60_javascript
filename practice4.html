@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        Email: <input type="text" name="email" placeholder="Enter Email Address"><br><br>
+        Password: <input type="text" name="password" placeholder="Enter Password"><br><br>
+        <button onclick="myData()" type="submit">Login</button>
+    </form>
+
+    <script>
+        class EmailCheck{
+            constructor(email, password){
+                this.email = email;
+                this.password = password;
+            }
+            validMail(){
+                let pattern = /[A-z0-9]+@[A-z]+\.[a-z]{2,4}/;
+                if(this.email.search(pattern)==-1){
+                    alert("Email Address is not valid");
+                }else if(this.password.length<6){
+                    alert("Password must be 6 length");
+                }else{
+                    document.write("Login Successful");
+                }
+                
+                }
+            }
+
+            function myData(){
+                let m = document.myform.email.value;
+                let n = document.myform.password.value;
+                let obj = new EmailCheck(m,n);
+            
+                obj.validMail();
+            
+            }
+
+        
+    </script>
+</body>
+</html>
